@@ -13,7 +13,7 @@ def create_patient(request):
         name = request.POST['name'] 
         disease = request.POST['disease'] 
         age = request.POST['age'] 
-        patient = patient(name = name,disease = disease, age = age)
+        patient = Patient(name = name,disease = disease, age = age)
         patient.save()
         return redirect('list_of_patient')         
 
